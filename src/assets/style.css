@@ -1,0 +1,284 @@
+*{
+    /*
+    Utilizado para resetar as configurações padrões 
+    da pagina.
+    */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(../../src/assets/bg-mobile.jpg);
+    --stroke-color: rgba( 255, 255, 255, 0.5);
+    --surface-color:rgba( 255, 255, 255, 0.05);
+    --surface-color-hover:rgba( 255, 255, 255, 0.02);
+    --high-light-color: rgba(255, 255, 255, 0.1);
+    --switch-bg-url: url(../../src/assets/sun.svg);
+}
+
+.light-mode {
+    --text-color:black;
+    --bg-url: url(../../src/assets/bg-mobile-light.jpg);
+    --stroke-color: rgba( 0, 0, 0, 0.5);
+    --surface-color:rgba( 0, 0, 0, 0.05);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
+    --high-light-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(../../src/assets/moon-stars.svg);
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    color:var(--text-color);
+}
+
+body{
+    /*
+    adiciona imagem ao fundo da pagina
+    */
+    /* background-image: var(--bg-url); */
+
+    /*
+    utilizamos para a imagem não ficar repetida no fundo
+    */
+    background-repeat: no-repeat;
+
+    /*
+    utilizamos para pasicionar a imagem centralizada no eixo x e eixo y
+    da pagina 
+    */
+    background-position: top center;
+
+    /*
+    utilizamos para a imagem preencher a pagina por completo e se ajustar 
+    de acordo com o viewport
+    */
+    background-size: cover;
+
+    /*
+    adiciona todos os elementos a um unico atributo css
+    na seguinte ordem:
+    color; image; repeat; position/size; 
+    */
+    background: var(--bg-url) no-repeat top center/cover;
+
+    height: 100vh;
+}
+
+#container{
+    /*
+    Define a largura dinamica do container
+    */
+    width:100%;
+
+    /*
+    Define a largura marxima que os elementos vão ocupar 
+    a partir da largura dinamica
+    */
+    max-width: 588px;
+
+    /*
+    Define a altura fixa do container
+    */
+
+    /* border: 1px solid red; */
+
+    /*
+    Preenche os espaços por igual automaticamente; em cima,
+    em baixo e nas laterais, porém existe uma regra css que 
+    não aplica as regras em cima e em baixo.
+    */
+    margin: 0px auto 0px;
+
+    padding: 0 24px;
+}
+
+#profile{
+    text-align: center;
+    padding: 24px;
+
+    /* border: 1px solid red; */
+
+}
+
+#profile img {
+
+    width: 112px;
+
+}
+
+#profile a{
+    /*
+    Peso
+    */
+    font-weight:400;
+
+    text-decoration: none;
+
+
+    /*
+    Altura da linha
+    */
+    line-height: 24px;
+
+    margin-top: 8px;
+}
+
+.img-profile{
+    border-radius: 50%;
+}
+
+/* links */
+
+#switch {
+    /* border: 1px solid red; */
+    margin: 24px;
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    left: 0;
+
+    animation: slide-out 0.3s;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--high-light-color);
+}
+
+.light-mode #switch button {
+    /* right: 0;
+    left: initial; */
+    animation: slide-in 0.3s forwards;
+    
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    --webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+    
+}
+
+/* links */
+
+ul{
+    /* border: 1px solid red; */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+ul li a{
+    /* border: 1px solid red; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(100px);
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.4s;
+
+    padding: 24px 0px;
+}
+
+ul li a:hover {
+    background-color: rgba( 255, 255, 255, 0.1);
+    border: 1.5px solid var(--text-color);
+}
+
+/*SOCIAL LINKS */
+
+#social-links {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    /* gap: 16px; */
+    padding: 2px 0px;
+    font-size: 24px;
+    
+}
+
+#social-links a{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 16px;
+
+   transition: all 0.2s;
+} 
+
+#social-links a:hover{
+    background: var(--high-light-color);
+    border-radius: 50%;
+} 
+
+/* FOOTER */
+
+footer {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 700px) {
+    :root{
+        --bg-url: url(../../src/assets/bg-desktop.jpg);
+    }
+
+    .light-mode{
+        --bg-url: url(../../src/assets/bg-desktop-light.jpg);
+    }
+}
+
+
+/* ANIMAÇÕES */
+
+@keyframes slide-in {
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
+}
