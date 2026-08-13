@@ -1,23 +1,42 @@
 <script setup lang="ts">
+    import { ref, shallowRef, markRaw } from 'vue'
+    import Modal from  '../templates/Modal.vue'
+    import MeetMe from '../profile/MeetMe.vue'
+    import Tips from '../profile/Tips.vue'
+    import Portfolio from '../profile/Jobs.vue'
 
-function findMe(){
-    alert("Ops! Esta tela ainda esta em Desenvolvimento. Logo Logo ela estará disponivel! Abraços");
-}
+    const showModal = ref(false)
+    const modalTitle = ref('')
+    const modalBody = shallowRef(null)
 
-function ViewTipsScreen(){
-    alert("Ops! A tela de dicas ainda não esta disponivel. Logo Logo ela estará disponivel! Abraços");
-}
+    function findMe(){
 
-function ViewJobScreen(){
-    alert("Ops! A tela que irá exibir os meus trabalhos ainda esta em Desenvolvimento. Logo Logo ela estará disponivel para Exibição! Abraços");
-}
+        showModal.value = true;
+        modalTitle.value = `Sobre mim`;
+        modalBody.value = markRaw(MeetMe)
+
+    }
+
+    function ViewTipsScreen(){
+        
+        showModal.value = true;
+        modalTitle.value = `Dicas`;
+        modalBody.value = markRaw(Tips)
+    }
+
+    function ViewJobScreen(){
+        
+        showModal.value = true
+        modalTitle.value = `Portifólio`;
+        modalBody.value = markRaw(Portfolio);
+
+    }
 </script>
 
 <template>
-    
     <ul>
         <li>
-            <a href="#" @click="findMe()">Me conheça um pouco</a>
+            <a href="#" @click="findMe()">Sobre mim</a>
         </li>
 
         <li>
@@ -28,5 +47,13 @@ function ViewJobScreen(){
             <a href="#" @click="ViewJobScreen()">Ver meu portifólio</a>
         </li>
     </ul>
-    
+    <Modal v-model="showModal">
+        <template #header>
+            <h3>{{ modalTitle }}</h3>
+        </template>
+        <template #body>
+            <component :is="modalBody" v-if="modalBody" />
+        </template>
+    </Modal>
+
 </template>

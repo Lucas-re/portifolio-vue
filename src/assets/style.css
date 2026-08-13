@@ -16,6 +16,8 @@
     --surface-color-hover:rgba( 255, 255, 255, 0.02);
     --high-light-color: rgba(255, 255, 255, 0.1);
     --switch-bg-url: url(../../src/assets/sun.svg);
+    --bg-modal-color: rgba(34, 33, 33, 0.616);
+    --bg-header-color: rgb(0, 0, 0);
 }
 
 .light-mode {
@@ -26,6 +28,8 @@
     --surface-color-hover:rgba(0, 0, 0, 0.02);
     --high-light-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(../../src/assets/moon-stars.svg);
+    --bg-modal-color: rgba(253, 253, 253, 0.664);
+    --bg-header-color: rgb(243, 240, 240);
 }
 
 body *{
@@ -148,7 +152,6 @@ body{
 
     position: absolute;
     top: 50%;
-    z-index: 1;
     transform: translateY(-50%);
     left: 0;
 
@@ -172,7 +175,6 @@ body{
     height: 24px;
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
-    backdrop-filter: blur(4px);
     --webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
     
