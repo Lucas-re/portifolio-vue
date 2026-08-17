@@ -42,14 +42,6 @@
     justify-content: center;
     }
 
-    .modal {
-    background: var(--bg-modal-color);
-    width: 80%;
-    height: 800px;
-    border-radius: 10px;
-    overflow-y: auto;
-    animation: fadeIn 0.2s ease;
-    }
 
     .modal-header {
     display: flex;
@@ -101,4 +93,27 @@
             transform: scale(1);
         }
     }
+
+    .modal {
+      background: var(--bg-modal-color);
+      width: 85%;
+      height: 800px;
+      border-radius: 10px;
+      overflow-y: auto;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @media (max-width: 700px) {
+
+      .modal {
+          background: var(--bg-modal-color);
+          width: 80%;
+          height: 700px;
+          border-radius: 10px;
+          overflow-y: auto;
+          animation: fadeIn 0.2s ease;
+      }
+    }
+
+
 </style>
