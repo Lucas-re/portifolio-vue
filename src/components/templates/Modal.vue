@@ -107,7 +107,7 @@
 
       .modal {
           background: var(--bg-modal-color);
-          width: 80%;
+          width: 100%;
           height: 700px;
           border-radius: 10px;
           overflow-y: auto;
