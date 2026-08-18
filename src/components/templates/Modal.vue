@@ -74,13 +74,18 @@
     font-size: 16px;
     }
 
-    .btn {
+    button {
     padding: 10px 20px;
-    background: rgb(151, 150, 150);
+    background: rgba(122, 122, 122, 0.753);
     color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    }
+
+    footer :hover{
+        background-color: rgba( 255, 255, 255, 0.1);
+        border: 1.5px solid var(--text-color);
     }
 
     @keyframes fadeIn {
@@ -103,7 +108,7 @@
       animation: fadeIn 0.2s ease;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 930px) {
 
       .modal {
           background: var(--bg-modal-color);

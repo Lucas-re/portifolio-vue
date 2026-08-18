@@ -1,91 +1,128 @@
 <script setup lang="ts">
 
+import { ref, onMounted } from 'vue';
+import { buscarAbout } from '@/services/profile/about.js';
+const allAbouts = ref([]);
+
+onMounted(async () => {
+    allAbouts.value = await buscarAbout();
+});
+
 </script>
 
 <template>
+        
         <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti nam quos minus aliquid praesentium dolorem, velit voluptatem tenetur voluptates obcaecati excepturi laborum facere amet libero natus, aliquam aperiam! Enim.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda magnam, expedita omnis ab rem cumque nulla minima sequi nobis itaque, incidunt officia debitis repellat quibusdam amet aut vero culpa quasi!
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ab cum modi enim delectus corrupti a porro inventore magni rem tempora aut neque ut eveniet mollitia sapiente laborum, minus in.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptates mollitia libero sint eius obcaecati! Aliquam non repellat nemo delectus aspernatur consequuntur dolorem, possimus consequatur reiciendis vitae commodi nesciunt esse.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum labore, eligendi ab aspernatur, tempore ut libero repellat amet dolore sapiente ad ipsam deleniti excepturi explicabo! Asperiores officia consequuntur sit culpa!
 
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti nam quos minus aliquid praesentium dolorem, velit voluptatem tenetur voluptates obcaecati excepturi laborum facere amet libero natus, aliquam aperiam! Enim.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda magnam, expedita omnis ab rem cumque nulla minima sequi nobis itaque, incidunt officia debitis repellat quibusdam amet aut vero culpa quasi!
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ab cum modi enim delectus corrupti a porro inventore magni rem tempora aut neque ut eveniet mollitia sapiente laborum, minus in.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptates mollitia libero sint eius obcaecati! Aliquam non repellat nemo delectus aspernatur consequuntur dolorem, possimus consequatur reiciendis vitae commodi nesciunt esse.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum labore, eligendi ab aspernatur, tempore ut libero repellat amet dolore sapiente ad ipsam deleniti excepturi explicabo! Asperiores officia consequuntur sit culpa!
-
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti nam quos minus aliquid praesentium dolorem, velit voluptatem tenetur voluptates obcaecati excepturi laborum facere amet libero natus, aliquam aperiam! Enim.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda magnam, expedita omnis ab rem cumque nulla minima sequi nobis itaque, incidunt officia debitis repellat quibusdam amet aut vero culpa quasi!
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ab cum modi enim delectus corrupti a porro inventore magni rem tempora aut neque ut eveniet mollitia sapiente laborum, minus in.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptates mollitia libero sint eius obcaecati! Aliquam non repellat nemo delectus aspernatur consequuntur dolorem, possimus consequatur reiciendis vitae commodi nesciunt esse.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum labore, eligendi ab aspernatur, tempore ut libero repellat amet dolore sapiente ad ipsam deleniti excepturi explicabo! Asperiores officia consequuntur sit culpa!
+                <div class="container-top">
+                        <h1 ></h1>
+                        <p></p>  
+                </div>
+        </div>
 
 
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti nam quos minus aliquid praesentium dolorem, velit voluptatem tenetur voluptates obcaecati excepturi laborum facere amet libero natus, aliquam aperiam! Enim.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda magnam, expedita omnis ab rem cumque nulla minima sequi nobis itaque, incidunt officia debitis repellat quibusdam amet aut vero culpa quasi!
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ab cum modi enim delectus corrupti a porro inventore magni rem tempora aut neque ut eveniet mollitia sapiente laborum, minus in.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptates mollitia libero sint eius obcaecati! Aliquam non repellat nemo delectus aspernatur consequuntur dolorem, possimus consequatur reiciendis vitae commodi nesciunt esse.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum labore, eligendi ab aspernatur, tempore ut libero repellat amet dolore sapiente ad ipsam deleniti excepturi explicabo! Asperiores officia consequuntur sit culpa!
+        <div>
+        
+                <div class="container-right">
+                        <h1></h1>
+                        <p></p>  
+                </div>
+        
+                <div class="container-left">
+                        <h1></h1>
+                        <p></p>  
+                </div>
 
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti nam quos minus aliquid praesentium dolorem, velit voluptatem tenetur voluptates obcaecati excepturi laborum facere amet libero natus, aliquam aperiam! Enim.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda magnam, expedita omnis ab rem cumque nulla minima sequi nobis itaque, incidunt officia debitis repellat quibusdam amet aut vero culpa quasi!
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ab cum modi enim delectus corrupti a porro inventore magni rem tempora aut neque ut eveniet mollitia sapiente laborum, minus in.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptates mollitia libero sint eius obcaecati! Aliquam non repellat nemo delectus aspernatur consequuntur dolorem, possimus consequatur reiciendis vitae commodi nesciunt esse.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum labore, eligendi ab aspernatur, tempore ut libero repellat amet dolore sapiente ad ipsam deleniti excepturi explicabo! Asperiores officia consequuntur sit culpa!
 
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti nam quos minus aliquid praesentium dolorem, velit voluptatem tenetur voluptates obcaecati excepturi laborum facere amet libero natus, aliquam aperiam! Enim.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda magnam, expedita omnis ab rem cumque nulla minima sequi nobis itaque, incidunt officia debitis repellat quibusdam amet aut vero culpa quasi!
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ab cum modi enim delectus corrupti a porro inventore magni rem tempora aut neque ut eveniet mollitia sapiente laborum, minus in.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptates mollitia libero sint eius obcaecati! Aliquam non repellat nemo delectus aspernatur consequuntur dolorem, possimus consequatur reiciendis vitae commodi nesciunt esse.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum labore, eligendi ab aspernatur, tempore ut libero repellat amet dolore sapiente ad ipsam deleniti excepturi explicabo! Asperiores officia consequuntur sit culpa!
+                
+        </div>
 
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti nam quos minus aliquid praesentium dolorem, velit voluptatem tenetur voluptates obcaecati excepturi laborum facere amet libero natus, aliquam aperiam! Enim.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda magnam, expedita omnis ab rem cumque nulla minima sequi nobis itaque, incidunt officia debitis repellat quibusdam amet aut vero culpa quasi!
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ab cum modi enim delectus corrupti a porro inventore magni rem tempora aut neque ut eveniet mollitia sapiente laborum, minus in.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptates mollitia libero sint eius obcaecati! Aliquam non repellat nemo delectus aspernatur consequuntur dolorem, possimus consequatur reiciendis vitae commodi nesciunt esse.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum labore, eligendi ab aspernatur, tempore ut libero repellat amet dolore sapiente ad ipsam deleniti excepturi explicabo! Asperiores officia consequuntur sit culpa!
+        <div>
+        
+                <div class="container-right">
+                        <h1></h1>
+                        <p></p>  
+                </div>
+        
+                <div class="container-left">
+                        <h1></h1>
+                        <p></p>  
+                </div>
 
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti nam quos minus aliquid praesentium dolorem, velit voluptatem tenetur voluptates obcaecati excepturi laborum facere amet libero natus, aliquam aperiam! Enim.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda magnam, expedita omnis ab rem cumque nulla minima sequi nobis itaque, incidunt officia debitis repellat quibusdam amet aut vero culpa quasi!
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ab cum modi enim delectus corrupti a porro inventore magni rem tempora aut neque ut eveniet mollitia sapiente laborum, minus in.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptates mollitia libero sint eius obcaecati! Aliquam non repellat nemo delectus aspernatur consequuntur dolorem, possimus consequatur reiciendis vitae commodi nesciunt esse.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum labore, eligendi ab aspernatur, tempore ut libero repellat amet dolore sapiente ad ipsam deleniti excepturi explicabo! Asperiores officia consequuntur sit culpa!
+
+                
+        </div>
+
+        <div>
+
+                <div class="container-botton">
+                        <h1></h1>
+                        <p></p>  
+                </div>
         </div>
 </template>
 
 <style scoped>
+
+    div {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        gap: 16px;
+
+    }
+    .container-top {
+      background: var(--bg-container-color);
+      width:100%;
+      height: 25vh;
+      border-radius: 10px;
+    }
+
+     .container-left {
+      background: var(--bg-container-color);
+      width: 50%;
+      height: 25vh;
+      border-radius: 10px;
+    }
+      .container-right {
+      background: var(--bg-container-color);
+      width: 50%;
+      height: 25vh;
+      border-radius: 10px;
+    }
+    .container-botton {
+      background: var(--bg-container-color);
+      width:100%;
+      height: 25vh;
+      border-radius: 10px;
+    }
+
+    div :hover{
+        background-color: var(--surface-container-color-hover);
+     }
+
+    @media (max-width: 930px) {
+
+        div {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          gap: 16px;
+
+        }
+
+        .container-left {
+          background: var(--bg-container-color);
+          width: 100%;
+          height: 25vh;
+          border-radius: 10px;
+        }
+
+      .container-right {
+          background: var(--bg-container-color);
+          width: 100%;
+          height: 25vh;
+          border-radius: 10px;
+      }
+    }
 </style>
